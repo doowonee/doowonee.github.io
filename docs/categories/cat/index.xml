@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <copyright>©2019 Doowonee.</copyright>
-    <lastBuildDate>Mon, 31 Aug 2020 20:24:19 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2020 20:37:02 +0900</lastBuildDate>
     
         <atom:link href="/categories/cat/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>두번째 게시물</title>
+      <link>/posts/second/</link>
+      <pubDate>Mon, 31 Aug 2020 20:37:02 +0900</pubDate>
+      
+      <guid>/posts/second/</guid>
+      <description>이렇게 글을 추가 한다 하지만 매번 빌드 해야 하지</description>
+      
+    </item>
     
     <item>
       <title>Test Article</title>

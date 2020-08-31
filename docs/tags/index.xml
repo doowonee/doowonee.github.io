@@ -7,15 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <copyright>©2019 Doowonee.</copyright>
-    <lastBuildDate>Mon, 31 Aug 2020 20:24:19 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2020 20:37:02 +0900</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>extra</title>
+      <link>/tags/extra/</link>
+      <pubDate>Mon, 31 Aug 2020 20:37:02 +0900</pubDate>
+      
+      <guid>/tags/extra/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>wa</title>
       <link>/tags/wa/</link>
-      <pubDate>Mon, 31 Aug 2020 20:24:19 +0900</pubDate>
+      <pubDate>Mon, 31 Aug 2020 20:37:02 +0900</pubDate>
       
       <guid>/tags/wa/</guid>
       <description></description>
