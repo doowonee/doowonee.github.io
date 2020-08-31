@@ -3,7 +3,6 @@ title = "doowonee"
 theme = "hugo-notepadium"
 copyright = "©2019 Doowonee."
 
-publishDir = "docs"
 languageCode = "ko"
 hasCJKLanguage = true
 
