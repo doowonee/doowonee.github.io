@@ -1,6 +1,5 @@
 baseURL = "https://www.doowonee.com"
 title = "doowonee"
-theme = "hugo-notepadium"
 copyright = "©2019 Doowonee."
 
 languageCode = "ko"
