@@ -9,6 +9,7 @@ categories = [
 ]
 tags = [
     "markdown",
+    "pinktalk notice",
     "text",
     "tag with whitespaces"
 ]

@@ -1,6 +1,6 @@
 {{ define "body-class" }}template-archives{{ end }}
 {{ define "main" }}
-    {{ $categories := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+    <!-- {{ $categories := ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
     {{ if $categories }}
     <h2 class="section-title">Categories</h2>
     <div class="category-list">
@@ -10,7 +10,19 @@
             {{ end }}
         </div>
     </div>
-    {{ end }}
+    {{ end }} -->
+    <h2 class="section-title">{{ T "widgetTagCloudTitle" }}</h2>
+    <div class="category-list">
+        <section class="widget tagCloud">
+            <div class="tagCloud-tags">
+                {{ range .Site.Taxonomies.tags.ByCount }}
+                    <a href="{{ .Page.Permalink }}" class="font_size_{{ .Count }}">
+                        {{ T .Page.Title }}
+                    </a>
+                {{ end }}
+            </div>
+        </section>
+    </div>
 
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}

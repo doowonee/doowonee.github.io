@@ -8,6 +8,7 @@ tags = [
     "css",
     "html",
     "themes",
+    "pinktalk notice",
 ]
 categories = [
     "themes",

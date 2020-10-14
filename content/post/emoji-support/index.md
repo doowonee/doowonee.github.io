@@ -8,6 +8,7 @@ categories = [
 ]
 tags = [
     "emoji",
+    "pinktalk notice",
 ]
 image = "the-creative-exchange-d2zvqp3fpro-unsplash.jpg"
 +++
