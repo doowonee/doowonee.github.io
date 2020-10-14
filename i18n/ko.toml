@@ -1,0 +1,23 @@
+[toggleMenu]
+    other = "토클 매뉴"
+    
+[relatedContents]
+    other = "관련 글"
+
+[lastUpdatedOn]
+    other ="최근 수정 날짜"
+
+[widgetArchivesTitle]
+    other = "아카이브"
+
+[widgetArchivesMore]
+    other = "더 보가"
+
+[widgetTagCloudTitle]
+    other = "태그"
+
+[notFoundTitle]
+    other = "페이지 없음"
+
+[notFoundSubtitle]
+    other = "어익후 이런 찾으시는 페이지가 지워졌나봐요."

@@ -1,6 +1,19 @@
-{{- define "main" -}}
-{{- partial "homepage-body.html" . -}}
-{{- $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) -}}
-{{- partial "note-list.html" $paginator -}}
-{{- partial "pagination.html" $paginator -}}
-{{- end -}}
+{{ define "main" }}
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+    {{ $pag := .Paginate ($filtered) }}
+
+    <section class="article-list">
+        {{ range $index, $element := $pag.Pages }}
+            {{ partial "article-list/default" . }}
+        {{ end }}
+    </section>
+
+    {{- partial "pagination.html" . -}}
+    {{ partialCached "footer/footer" . }}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partialCached "sidebar/right.html" . }}
+{{ end }}

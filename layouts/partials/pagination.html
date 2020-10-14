@@ -1,34 +1,26 @@
-{{- $paginator := . -}}
+{{ if gt .Paginator.TotalPages 1 }}
+    <nav class='pagination'>
+        {{ $.Scratch.Set "hasPrevDots" false }}
+        {{ $.Scratch.Set "hasNextDots" false }}
 
-{{- if gt $paginator.TotalPages 1 -}}
-
-{{- $pageIndex := $paginator.PageNumber -}}
-{{- $totalPages := $paginator.TotalPages -}}
-{{- $cols := 5.0 -}}
-{{- $rows := math.Ceil (div $totalPages $cols) -}}
-{{- $row := math.Ceil (div $pageIndex $cols) -}}
-{{- $startPage := sub (mul $row $cols) $cols -}}
-{{- $endPage := add $startPage $cols -}}
-
-<div class="pagination">
-    <ul>
-        {{- if gt $row 1 -}}
-            <li><a href="{{- $paginator.Prev.URL -}}"><span class="iconfont icon-pagepreview"></span></a></li>
-        {{- end -}}
-
-        {{- range $paginator.Pagers -}}
-            {{- if and (gt .PageNumber $startPage) (le .PageNumber $endPage) -}}
-                {{- $active := "" -}}
-                {{- if eq .PageNumber $paginator.PageNumber -}}
-                    {{- $active = "active" -}}
-                {{- end -}}
-                <li><a class="{{- $active -}}" href="{{- .URL -}}">{{- .PageNumber -}}</a></li>
-            {{- end -}}
-        {{- end -}}
-
-        {{- if lt $row $rows -}}
-            <li><a href="{{- $paginator.Next.URL -}}"><span class="iconfont icon-pagenext"></span></a></li>
-        {{- end -}}
-    </ul>
-</div>
-{{- end -}}
+        {{ range .Paginator.Pagers }}
+            {{ if eq . $.Paginator }}
+                <span class='page-link current'>
+                    {{- .PageNumber -}}
+                </span>
+                {{ else if or (or (eq . $.Paginator.First) (eq . $.Paginator.Prev)) (or  (eq . $.Paginator.Next) (eq . $.Paginator.Last )) }}
+                    <a class='page-link' href='{{ .URL }}'>
+                        {{- .PageNumber -}}
+                    </a>
+                {{ else }}
+                    {{ if and (not ($.Scratch.Get "hasPrevDots")) (lt .PageNumber $.Paginator.PageNumber)  }}
+                        {{ $.Scratch.Set "hasPrevDots" true }}
+                        <span class='page-link dots'>&hellip;</span>
+                    {{ else if and (not ($.Scratch.Get "hasNextDots")) (gt .PageNumber $.Paginator.PageNumber) }}
+                        {{ $.Scratch.Set "hasNextDots" true }}
+                        <span class='page-link dots'>&hellip;</span>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+    </nav>
+{{ end }}

@@ -1,60 +1,96 @@
-baseURL = "https://www.doowonee.com"
-title = "doowonee"
-copyright = "©2019 Doowonee."
-
+baseurl = "https://doowonee.com"
 languageCode = "ko"
-hasCJKLanguage = true
+DefaultContentLanguage = "ko"
+paginate = 5
+title = "Doowonee"
+disqusShortname = ""
 
-enableRobotsTXT = true
-
-# Enable Disqus
-#disqusShortname = "XXX"
-
-# Google Analytics
-#googleAnalytics = "UA-123-45"
-
-[markup.highlight]
-codeFences = true
-noClasses = false
-
-[markup.goldmark.renderer]
-unsafe = true  # enable raw HTML in Markdown
-
+[permalinks]
+    post = "/p/:slug/"
+    page = "/:slug/"
+    
 [params]
-style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
-dateFormat = ""  # if unset, default is "2006-01-02"
-logo = ""  # if you have a logo png
-slogan = "no jQuery"
-license = ""  # CC License
-fullRss = false # Puts entire HTML post into rss 'description' tag. If unset, default is false.
+    mainSections = ["post"]
+    featuredImageField = "image"
+    rssFullContent = true
+    
+    [params.dateFormat]
+        published = "Jan 02, 2006"
+        lastUpdated = "Jan 02, 2006 15:04 MST"
+        
+    [params.sidebar]
+        emoji = "🍥"
+        avatar = "img/avatar.png"
+        subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        
+    [params.article]
+        math = false
+        [params.article.license]
+            enabled = true 
+            default = "Licensed under CC BY-NC-SA 4.0"
+            
+    [params.comments]
+        enabled = false
+        provider = "disqus"         # Available: disqus, utterances    
+        [params.comments.utterances]
+            repo = ""
+            issueTerm = "pathname"
+            label = ""             # Optional
+            theme = "preferred-color-scheme"
+            
+    [params.widgets]
+        enabled = ['archives', 'tag-cloud']
+        [params.widgets.archives]
+            limit = 5
+            ### Archives page relative URL
+            path = "archives"       
+        [params.widgets.tagCloud]
+            limit = 10
+            
+    [params.opengraph]
+        [params.opengraph.twitter]
+            site = ""
+            card = "summary_large_image"
+            
+    [params.defaultImage]
+        [params.defaultImage.opengraph]
+            enabled = false
+            local = false
+            src = ""
+            
+[menu]
+    [[menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = -100
+        pre = "home"
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "about"
+        weight = -90
+        pre = "user"
+    [[menu.main]]
+        identifier = "archives"
+        name = "Archives"
+        url = "archives"
+        weight = -70
+        pre = "archives"
 
-[params.comments]
-enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+[related]
+    includeNewer = true
+    threshold = 60
+    toLower = false
 
-[params.math]
-enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
-use = "katex"  # option: "katex", "mathjax". default: "katex"
+    [[related.indices]]
+        name = "tags"
+        weight = 100
 
-[params.syntax]
-use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
-theme = "xcode"
-darkTheme = "xcode-dark"  # apply this theme in dark mode
+    [[related.indices]]
+        name = "categories"
+        weight = 200
 
-[params.share]
-enable = false
-addThisId = ""
-inlineToolId = ""
-
-[params.nav]
-showCategories = true       # /categories/
-showTags = true             # /tags/
-
-# custom navigation items
-
-[[params.nav.custom]]
-title = "About"
-url = "/about"
-
-[[params.nav.custom]]
-title = "Ext"
-url = "https://gohugo.io/"
+[markup]
+    [markup.highlight]
+        noClasses = false
