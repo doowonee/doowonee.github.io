@@ -21,3 +21,15 @@
 
 [notFoundSubtitle]
     other = "어익후 이런 찾으시는 페이지가 지워졌나봐요."
+
+[Home]
+    other = "홈"
+
+[About]
+    other = "두원이"
+
+[Archives]
+    other = "아카이브"
+
+["pinktalk notice"]
+    other = "핑크톡 공지사항"

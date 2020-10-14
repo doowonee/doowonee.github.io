@@ -21,3 +21,15 @@
 
 [notFoundSubtitle]
     other = "This page does not exist."
+
+[Home]
+    other = "PinkTalk"
+
+[About]
+    other = "notice"
+
+[Archives]
+    other = "notice"
+
+["pinktalk notice"]
+    other = "PinkTalk Notice"

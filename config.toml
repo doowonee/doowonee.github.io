@@ -61,22 +61,28 @@ disqusShortname = ""
 [menu]
     [[menu.main]]
         identifier = "home"
+        pre = "home"
         name = "Home"
         url = "/"
-        weight = -100
-        pre = "home"
-    [[menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "about"
-        weight = -90
-        pre = "user"
+        weight = 1
+    # [[menu.main]]
+    #     identifier = "about"
+    #     pre = "user"
+    #     name = "About"
+    #     url = "about"
+    #     weight = 3
     [[menu.main]]
         identifier = "archives"
+        pre = "archives"
         name = "Archives"
         url = "archives"
-        weight = -70
-        pre = "archives"
+        weight = 4
+    [[menu.main]]
+        identifier = "pinktalkNotice"
+        pre = "speakerphone"
+        name = "pinktalk notice"
+        url = "tags/pinktalk-notice/"
+        weight = 3
 
 [related]
     includeNewer = true
