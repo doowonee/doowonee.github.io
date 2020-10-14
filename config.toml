@@ -21,7 +21,7 @@ disqusShortname = ""
     [params.sidebar]
         emoji = "🍥"
         avatar = "img/avatar.png"
-        subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        subtitle = "Software Engineer"
         
     [params.article]
         math = false
