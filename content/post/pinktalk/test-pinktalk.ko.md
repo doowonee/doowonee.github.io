@@ -8,3 +8,5 @@ tags = [
 +++
 
 # 이게 핑크톡 공지 사항 이다.
+
+{{< pinktalk-header >}}
