@@ -6,7 +6,6 @@ title = "Doowonee"
 disqusShortname = ""
 
 [permalinks]
-    post = "/p/:slug/"
     page = "/:slug/"
     
 [params]
