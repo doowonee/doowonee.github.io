@@ -3,7 +3,7 @@ languageCode = "ko"
 DefaultContentLanguage = "ko"
 paginate = 5
 title = "Doowonee"
-disqusShortname = ""
+disqusShortname = "doowonee"
 
 [permalinks]
     page = "/:slug/"
@@ -29,7 +29,7 @@ disqusShortname = ""
             default = "Licensed under CC BY-NC-SA 4.0"
             
     [params.comments]
-        enabled = false
+        enabled = true
         provider = "disqus"         # Available: disqus, utterances    
         [params.comments.utterances]
             repo = ""
